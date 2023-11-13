@@ -1,0 +1,5 @@
+br\com\pdv\PdvApplication.class
+br\com\pdv\entidade\LojaEntidade.class
+br\com\pdv\entidade\ProdutoEntidade.class
+br\com\pdv\controller\LojaController.class
+br\com\pdv\repository\LojaRepository.class

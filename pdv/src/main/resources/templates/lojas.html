@@ -1,1 +1,26 @@
-lojas
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Lojas Show</title>
+	</head>
+	<body>
+		<h1>LOJAS CADASTRADAS:</h1>
+		<table class="table table-sm table-striped table-hover table-bordered">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nome da Loja</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="loja : ${lojas}">
+					<td th:text="${loja.id}"></td>
+					<td th:text="${loja.nome}"></td>
+
+				</tr>
+			</tbody>
+			
+		</table>
+	</body>
+</html>

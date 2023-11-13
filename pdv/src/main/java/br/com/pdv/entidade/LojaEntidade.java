@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="loja" , schema = "pdv")
+@Table(name="lojas" , schema = "pdv")
 public class LojaEntidade implements Serializable{
 
 	/**
@@ -29,7 +29,19 @@ public class LojaEntidade implements Serializable{
 		this.id = id;
 	}
 	
-	
+
+	@Column(name = "nome")
+	private String nome;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
 	
 	
 
