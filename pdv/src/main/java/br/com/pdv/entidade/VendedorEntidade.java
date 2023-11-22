@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "produto", schema = "pdv")
-public class ProdutoEntidade implements Serializable{
+@Table(name = "vendedor", schema = "pdv")
+public class VendedorEntidade implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -21,10 +21,6 @@ public class ProdutoEntidade implements Serializable{
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
 	@Column(name = "nome")
 	private String nome;
 
@@ -34,26 +30,6 @@ public class ProdutoEntidade implements Serializable{
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-	@Column(name = "quantidade")
-	private Long quantidade;
-
-	public Long getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(Long quantidade) {
-		this.quantidade = quantidade;
-	}
-	@Column(name = "preco")
-	private Double preco;
-
-	public Double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(Double preco) {
-		this.preco = preco;
 	}
 
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>VENDAS</title>
+	</head>
+	<body>
+		<h1>Vendas:</h1>
+		<table class="table table-sm table-striped table-hover table-bordered">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Venda efetuada</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="venda : ${vendas}">
+					<td th:text="${venda.id}"></td>
+					<td th:text="${venda.nome}"></td>
+
+				</tr>
+			</tbody>
+			
+		</table>
+	</body>
+</html>

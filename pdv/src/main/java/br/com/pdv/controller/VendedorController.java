@@ -5,20 +5,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import br.com.pdv.repository.ProdutoRepository;
+import br.com.pdv.repository.VendedorRepository;
 
 @Controller
-public class ProdutoController {
+public class VendedorController {
 
 	@Autowired
-	private ProdutoRepository produtoRepository; //cria uma instância do nosso repositório
+	private VendedorRepository vendedorRepository; //cria uma instância do nosso repositório
 	
-	@GetMapping ({"/produtos"}) //É o nome que eu escolher
+	@GetMapping ({"/vendedores"}) //É o nome que eu escolher
 	public String home(ModelMap model) {
 		
 		//o findAll lista todos os produtos
-		model.addAttribute("produtos", produtoRepository.findAll());
-		return "produtos"; // é o nome do arquivo real
+		model.addAttribute("vendedores", vendedorRepository.findAll());
+		return "vendedores"; // é o nome do arquivo real
 	}
 	
 	
